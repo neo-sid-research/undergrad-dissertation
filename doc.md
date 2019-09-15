@@ -10,11 +10,11 @@ While we use the same U-net archictecture proposed by **cite LSID section 4**, w
 
 ## Background and Related Work
 
-LSID advantages over traditional pipelines.
-
-MAE loss shortcomings for this task.
-
-SSIM advantages.
+* LSID advantages over traditional pipelines.
+* LSID experiments with GAN losses
+* MAE loss shortcomings for this task.
+* SSIM advantages and disadvantages.
+* MS-SSIM 
 
 ## Mobile Cameras: See-in-the-Dark dataset
 
@@ -31,7 +31,19 @@ Furthermore, it will enable us and future researchers to create different approa
 
 ### Devices
 
-We intend to use a Xiaomi? Motorola?
+We used a Xiaomi Mi Mix S3, a Redmii ??? and a Cannon DSLR...
+
+* Specs, which sensor they use, supported resolution, ISO, exposures.
+
+### Methodology
+
+We took our photographs in controlled environments.
+The devices were kept stable on a tripod.
+We created a small Android application to take the photos automatically, so we would not need to touch our devices to set them up in between shots.
+
+
+## Experiments
+
 
 
 ## References
@@ -40,8 +52,8 @@ We intend to use a Xiaomi? Motorola?
 
 [Loss Functions for Image Restoration with NeuralNetworks, IEEE](https://arxiv.org/pdf/1511.08861.pdf)
 
-[SSIM, IEEE](https://ieeexplore.ieee.org/document/1284395) // over 13k citations
-
-[]
 
 [ms-ssim vs pl losses, bubble?](http://www.cs.toronto.edu/~jsnell/assets/perceptual_similarity_metrics_icip_2017.pdf)
+
+
+[SSIM, IEEE](https://ieeexplore.ieee.org/document/1284395) // over 13k citations
