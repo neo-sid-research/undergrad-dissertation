@@ -40,8 +40,8 @@ As Chen et al also noted "experiments with cross-sensor generalization indicate 
 We intend to make available a new dataset with images from mobile devices, so more research will be possible.
 
 \section{Loss Functions for Image Restoration}
-Zhao et al showed the importance of perceptually-motivated losses for image restoration tasks where humans are the ones assessing the images' quality \cite{DBLP:journals/tci/ZhaoGFK17:l1ssimloss}.
-Low-light image enhancing and denoising is exactly that kind of task.
+Zhao et al showed the importance of perceptually-motivated losses for image restoration tasks where humans are the ones assessing the quality of the resulting images~\cite{DBLP:journals/tci/ZhaoGFK17:l1ssimloss}.
+Extreme low-light image enhancing and denoising is exactly that kind of task.
 
 MAE loss shortcomings for this task...
 
@@ -51,10 +51,13 @@ Where MS-SSIM comes in...
 
 Using both L1 and MS-SSIM as shown in \cite{DBLP:journals/tci/ZhaoGFK17:l1ssimloss} allows each to compensate for the other's faults.
 
+\section{Class-aware Denoising of Low-Light Images}
+Literally the most relevant and important part and I did not write anything.
 
-\chapter{Mobile Cameras: See-in-the-Dark dataset}
+
+\chapter{\label{chap:dataset}Mobile Cameras: See-in-the-Dark dataset}
 MCSID, pronounced "McSeed", is a new dataset we collected and made available inspired by the original SID dataset.
-We photographed 600 hundred distinct settings, with as many different sensors as we can get our hands own (as long as they all output a Bayer matrix **footnote explaining**).
+We photographed 600 hundred distinct settings, with as many different Bayer sensors as we can get our hands on.
 
 \section{Images}
 MCSID contains several RAW short exposure images (usually very dark, noisy, and color inaccurate renditions), each paired with a reference RAW long exposure image.
@@ -79,7 +82,7 @@ The devices were kept stable on a tripod.
 We created a small Android application to take the photos automatically, so we would not need to touch our devices to set them up in between shots.
 
 
-\chapter{Experiments}
+\chapter{\label{chap:experiments}Experiments}
 [wip]
 
 \section{Skipping Demosaicking}
