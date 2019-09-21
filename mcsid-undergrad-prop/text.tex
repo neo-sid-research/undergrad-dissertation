@@ -1,15 +1,20 @@
 \chapter{Introduction}
-Our work aims to accomplish three objectives: to expand the original SID dataset with images from mobile devices, experiment with loss functions based on perceptual quality metrics to try and mitigate the L1's artifacts [ref that figure where solid colors are all messy], and make this algorithm easier to use for developers who are not deep learning researchers.
+Our work aims to accomplish two big objectives:
+enhance the LSID pipeline so it performs better (both qualitatively and quantitatively) and make this algorithm easier to use for developers who are not deep learning researchers.
 
-Our reasoning to believe those goals are worthy is as follows: 
+In order to achieve that, we have come up with the following goals for our project:
+to expand the original SID dataset with images from mobile devices;
+to experiment with loss functions based on perceptual quality metrics to try and mitigate the L1's artifacts [ref that figure where solid colors are all messy];
+to experiment with extra supervision, specifically different forms of classification and segmentation to augment the image-to-image translation;
 
-Chen et al argue on \cite{DBLP:conf/cvpr/ChenCXK18} that "best results will be obtained when a dedicated network is trained for a specific camera sensor".
+
+Chen et al argue on \cite{DBLP:conf/cvpr/ChenCXK18:lsid} that "best results will be obtained when a dedicated network is trained for a specific camera sensor".
 The latest smartphones allow for very fine control over exposure and ISO, which enables us to create a dataset in the same fashion as the SID dataset, but with mobile images.
 What we are thinking here is, though mobile sensors are quite different from those of DSLRs, they are considerably close to each other (oof unscientific unstained claim based on common sense).
 As Chen et al also noted "experiments with cross-sensor generalization indicate that [dedicated networks] may not always be necessary [if the sensors are similar enough]".
 By making available a new dataset with images from mobile devices, more research will be possible.
 
-Zhao et al showed the importance of perceptually-motivated losses for image restoration tasks where humans are the ones assessing the images' quality \cite{DBLP:journals/tci/ZhaoGFK17}.
+Zhao et al showed the importance of perceptually-motivated losses for image restoration tasks where humans are the ones assessing the images' quality \cite{DBLP:journals/tci/ZhaoGFK17:l1ssimloss}.
 Low-light image enhancing and denoising is exactly that kind of task.
 
 By publishing a version of our code licensed as free software with an easy to use API, we will enable a broader audience to experiment with this technology, benefit from it, and maybe even contribute to its development, as we have seen happen with the Tesseract open-source OCR engine [cite their github or that Google paper].
@@ -20,7 +25,9 @@ We realize this may confuse the reviewer; there is a chart at the end outlining 
 
 
 \chapter{Background and Related Work}
+We will explore the relevant literature, emphasizing what 
 
+\section{Learning to See in the Dark}
 LSID advantages over traditional pipelines...
 
 MAE loss shortcomings for this task...
@@ -29,7 +36,7 @@ SSIM advantages and disadvantages...
 
 Where MS-SSIM comes in...
 
-Using both L1 and MS-SSIM as shown in \cite{DBLP:conf/miccai/RonnebergerFB15} allows each to compensate for the other's faults.
+Using both L1 and MS-SSIM as shown in \cite{DBLP:journals/tci/ZhaoGFK17:l1ssimloss} allows each to compensate for the other's faults.
 
 
 \chapter{Mobile Cameras: See-in-the-Dark dataset}
