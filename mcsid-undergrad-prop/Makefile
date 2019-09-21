@@ -62,6 +62,5 @@ endif
 # diretório atual. Retire a entrada '*.pdf' abaixo se não desejar
 # este comportamento.
 clean:
-	$(RM) *.aux *.log *.bbl *.blg *.out *.toc *.loa *.lob *.lov *.lof *.los *.lot *.dvi *.ps *.pdf
-# A sintaxe abaixo aparentemente só funciona no bash:
+	$(RM) *.aux *.log *.bbl *.blg *.out *.toc *.loa *.lob *.lov *.lof *.los *.lot *.dvi *.ps *.pdf *.fls *.fdb_latexmk *.gz
 #	$(RM) *.{aux,log,bbl,blg,out,toc,loa,lob,lov,lof,los,lot,dvi,ps,pdf}
