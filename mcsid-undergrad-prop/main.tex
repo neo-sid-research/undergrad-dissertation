@@ -1,7 +1,3 @@
-%----------------------------------------------------------------------------------
-% Exemplo do uso da classe tcc.cls. Veja o arquivo .cls
-% para mais detalhes e instruções.
-%----------------------------------------------------------------------------------
 
 % Seleção de idioma da monografia. Por enquanto as únicas opções
 % suportadas são 'portuguese' e 'english'
@@ -59,10 +55,8 @@
 % este pacote é incompatível com a classe.
 %\usepackage{algorithm}
 
-%----------------------------------------------------------------
-% Autor (OBRIGATÓRIO)
-%----------------------------------------------------------------
-\author{Fulano da Silva}
+
+\author{Nei Cardoso de Oliveira Neto}
 
 %----------------------------------------------------------------
 % Título (OBRIGATÓRIO). Devem ser passados DOIS parâmetros,
@@ -70,8 +64,8 @@
 % escolhido. Os títulos são utilizados para a montagem da capa,
 % resumo e abstract mais tarde.
 %----------------------------------------------------------------
-\title{Seu título em português aqui}
-      {Your title in english here}
+\title{Seu Título Aqui}
+      {Can Mobile Cameras See in the Dark?}
 
 %----------------------------------------------------------------
 % Opções para o tipo de trabalho (OBRIGATÓRIO)
@@ -84,15 +78,15 @@
 % Seleção do curso ("este trabalho é um requisito parcial para
 % obtenção do grau de (mestre ou doutor) em Ciência da Computação").
 %----------------------------------------------------------------
-\curso{\cc} % Ciência da Computação
-%\curso{\si} % Sistemas de Informação
+% \curso{\cc} % Ciência da Computação
+\curso{\si} % Sistemas de Informação
 %\curso{\es} % Engenharia de Software
 
 %----------------------------------------------------------------
 % Orientador (e Co-orientador, caso haja um). É OBRIGATÓRIO
 % informar pelo menos o orientador.
 %----------------------------------------------------------------
-\orientador{Rodrigo Barros}
+\orientador{Rodrigo Coelho Barros}
 % \coorientador{Ciclano de Farias}
 
 %----------------------------------------------------------------
@@ -148,22 +142,16 @@
 % erat sed diam voluptua at.
 % \end{resumo}
 
-%----------------------------------------------------------------
-% Abstract, com as palavras-chave passadas por parâmetro
-% (OBRIGATÓRIO, ao menos para teses e dissertações)
-%----------------------------------------------------------------
+
 \begin{abstract}{fully convolutional network, image-to-image translation, low-light photography, perceptual quality}
-Taking photos in low light scenarios with a mobile device such as a smartphone is challenging.
+Taking photos in low light environments with a mobile device such as a smartphone is challenging.
 Mainly due to hardware limitations, the added noise that comes with high ISO settings, and the blur introduced by the above-average exposures necessary.
 Several proprietary black-box strategies have been developed and deployed to the flagship smartphones.
 We propose an extension of the See-in-the-Dark dataset (\cite{DBLP:conf/cvpr/ChenCXK18} section 3) with images taken by smartphones, instead of DSLRs.
 While we use the same U-net architecture proposed by **\cite{} LSID section 4**, we propose the use of a perceptual dissimilarity metric as a loss function instead of the traditional pixel-wise MAE loss.
 \end{abstract}
 
-%----------------------------------------------------------------
-% Listas e sumário, nessa ordem. Somente o sumário é obrigatório,
-% portanto, comente as outras listas, caso sejam desnecessárias.
-%----------------------------------------------------------------
+
 % \listoffigures       % Lista de figuras      (OPCIONAL)
 % \listoftables        % Lista de tabelas      (OPCIONAL)
 % \listofalgorithms    % Lista de algoritmos   (OPCIONAL)
@@ -172,24 +160,11 @@ While we use the same U-net architecture proposed by **\cite{} LSID section 4**,
 % \listofsymbols       % Lista de símbolos     (OPCIONAL)
 \tableofcontents     % Sumário               (OBRIGATÓRIO)
 
-%----------------------------------------------------------------
-% Aqui começa o desenvolvimento do trabalho. Para uma melhor
-% organização do documento, separe-o em arquivos,
-% um para cada capítulo. Para isso, utilize o comando \include,
-% como mostrado abaixo.
-%----------------------------------------------------------------
+
 % \include{exemplo-cap1}
 % \include{exemplo-cap2}
 \include{text}
 
-%----------------------------------------------------------------
-% Aqui vai a bibliografia. Existem 3 estilos de citação: use
-% 'tcc-alpha' para citações do tipo [Abc+] ou [XYZ] (em ordem
-% alfabética na bibliografia), 'tcc-num' para citações
-% numéricas do tipo [1], [20], etc., em ordem de referência e
-% 'tcc-alpha-full' para citações estilo 'alpha' mas com nomes completos.
-%----------------------------------------------------------------
-% \bibliographystyle{tcc-alpha}
 \bibliographystyle{tcc-num}
 \bibliography{bibliography}
 
