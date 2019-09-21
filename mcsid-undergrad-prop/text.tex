@@ -14,36 +14,44 @@ Low-light image enhancing and denoising is exactly that kind of task.
 
 By publishing a version of our code licensed as free software with an easy to use API, we will enable a broader audience to experiment with this technology, benefit from it, and maybe even contribute to its development, as we have seen happen with the Tesseract open-source OCR engine [cite their github or that Google paper].
 
+\section{Structure}
+The following chapters were written considering with the final submission in mind, therefore the past tense was often used even though when referencing events that have not happened yet.
+We realize this may confuse the reviewer; there is a chart at the end outlining our plans to make it easier for the reader of this proposal to understand when which events will happen.
+
 
 \chapter{Background and Related Work}
 
-LSID advantages over traditional pipelines.
+LSID advantages over traditional pipelines...
 
-LSID experiments with GAN losses
+MAE loss shortcomings for this task...
 
-MAE loss shortcomings for this task.
+SSIM advantages and disadvantages...
 
-SSIM advantages and disadvantages.
-
-Where MS-SSIM comes in
+Where MS-SSIM comes in...
 
 Using both L1 and MS-SSIM as shown in \cite{DBLP:conf/miccai/RonnebergerFB15} allows each to compensate for the other's faults.
 
 
 \chapter{Mobile Cameras: See-in-the-Dark dataset}
-MCSID, pronounced McSeed, is a new dataset we collected inspired by the original SID dataset.
-We photographed 600 hundred distinct settings, with as many different sensors as we can get our hands own (as long as they all output a Bayer matrix **footnote explaining**).-+.
+MCSID, pronounced "McSeed", is a new dataset we collected and made available inspired by the original SID dataset.
+We photographed 600 hundred distinct settings, with as many different sensors as we can get our hands own (as long as they all output a Bayer matrix **footnote explaining**).
 
 \section{Images}
-It contains several RAW short exposure images (usually very dark, noisy, and color inaccurate renditions), each paired with a reference RAW long exposure image.
+MCSID contains several RAW short exposure images (usually very dark, noisy, and color inaccurate renditions), each paired with a reference RAW long exposure image.
 All frames are aligned with each other, as the cameras used were on tripods.
 In order to maximize the usefulness of our dataset, we took photos using several different exposures and, instead of a single taking singles, we took bursts.
 That will enable us to better evaluate LSID's strategy against traditional burst-based denoising algorithms.
 Furthermore, it will enable us and future researchers to create different approaches to the low-light imaging problem (e.g., composing N images in a single frame).
 
 \section{Devices}
-We used a Xiaomi Mi Mix S3, a Redmii and a Canon DSLR.
+We used a Xiaomi Mi Mix S3 and a Redmii (which model?).
 Here we will list their specs, which sensor they use, supported resolution, ISO, exposures, etc.
+
+\subsection{Xiaomi Mi Mix S3}
+[wip]
+
+\subsection{Redmii}
+[wip]
 
 \section{Methods}
 We took our photographs in controlled environments.
@@ -54,3 +62,5 @@ We created a small Android application to take the photos automatically, so we w
 \chapter{Experiments}
 
 \section{}
+
+
