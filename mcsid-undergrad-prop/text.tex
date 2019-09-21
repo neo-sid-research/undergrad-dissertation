@@ -6,29 +6,42 @@ In order to achieve that, we have come up with the following goals for our proje
 to expand the original SID dataset with images from mobile devices;
 to experiment with loss functions based on perceptual quality metrics to try and mitigate the L1's artifacts [ref that figure where solid colors are all messy];
 to experiment with extra supervision, specifically different forms of classification and segmentation to augment the image-to-image translation;
-
-
-Chen et al argue on \cite{DBLP:conf/cvpr/ChenCXK18:lsid} that "best results will be obtained when a dedicated network is trained for a specific camera sensor".
-The latest smartphones allow for very fine control over exposure and ISO, which enables us to create a dataset in the same fashion as the SID dataset, but with mobile images.
-What we are thinking here is, though mobile sensors are quite different from those of DSLRs, they are considerably close to each other (oof unscientific unstained claim based on common sense).
-As Chen et al also noted "experiments with cross-sensor generalization indicate that [dedicated networks] may not always be necessary [if the sensors are similar enough]".
-By making available a new dataset with images from mobile devices, more research will be possible.
-
-Zhao et al showed the importance of perceptually-motivated losses for image restoration tasks where humans are the ones assessing the images' quality \cite{DBLP:journals/tci/ZhaoGFK17:l1ssimloss}.
-Low-light image enhancing and denoising is exactly that kind of task.
+to publish high quality usable code for inferencing (i.e., running a forward pass of an image and getting its output as an image) using this pipeline. 
 
 By publishing a version of our code licensed as free software with an easy to use API, we will enable a broader audience to experiment with this technology, benefit from it, and maybe even contribute to its development, as we have seen happen with the Tesseract open-source OCR engine [cite their github or that Google paper].
 
 \section{Structure}
 The following chapters were written considering with the final submission in mind, therefore the past tense was often used even though when referencing events that have not happened yet.
-We realize this may confuse the reviewer; there is a chart at the end outlining our plans to make it easier for the reader of this proposal to understand when which events will happen.
+We realize this may confuse the reviewer; there is a chart on appendix ref apendicite outlining our plans to make it easier for the reader of this proposal to understand when which events will happen.
+On chapter \ref{chap:background}, we dive into previous works and explain how and why we are building upon them.
+On chapter ,
 
-
-\chapter{Background and Related Work}
-We will explore the relevant literature, emphasizing what 
+\chapter{\label{chap:background}Background and Related Work}
+In this chapter, we will explore the academic literature, emphasizing what is relevant to our research project. 
 
 \section{Learning to See in the Dark}
+Works with RAW images...
+
+Does the demosaicking along with the denoising...
+
 LSID advantages over traditional pipelines...
+
+extreme low-light imaging
+
+\subsection{See-in-the-Dark Dataset Limitations}
+The SID dataset contains \textbf{number} of pictures from that Fuji X-T2 and other number from a Sony a7s II.
+Both are mirrorless cameras (footnote explaining) in the prosumer price range.
+Their raw color matrices (bayer vs x-trans) are incompatibly different, making it impossible for us to train a model (that includes the demosaicking step) on, for example, the Sony train set and test it on the Fuji test set..
+
+Chen et al argue on \cite{DBLP:conf/cvpr/ChenCXK18:lsid} that "best results will be obtained when a dedicated network is trained for a specific camera sensor".
+The latest smartphones allow for very fine control over exposure and ISO, which enables us to create a dataset in the same fashion as the SID dataset, but with mobile images.
+What we are thinking here is, though mobile sensors are quite different from those of DSLRs, they are considerably close to each other (oof unscientific unstained claim based on common sense).
+As Chen et al also noted "experiments with cross-sensor generalization indicate that [dedicated networks] may not always be necessary [if the sensors are similar enough]".
+We intend to make available a new dataset with images from mobile devices, so more research will be possible.
+
+\section{Loss Functions for Image Restoration}
+Zhao et al showed the importance of perceptually-motivated losses for image restoration tasks where humans are the ones assessing the images' quality \cite{DBLP:journals/tci/ZhaoGFK17:l1ssimloss}.
+Low-light image enhancing and denoising is exactly that kind of task.
 
 MAE loss shortcomings for this task...
 
@@ -67,7 +80,20 @@ We created a small Android application to take the photos automatically, so we w
 
 
 \chapter{Experiments}
+[wip]
 
-\section{}
+\section{Skipping Demosaicking}
+[wip]
+
+\section{Loss Functions}
+[wip]
+
+\section{Classification}
+[wip]
+
+\section{Segmentation}
+[wip]
 
 
+\chapter{Final Thoughts on our Contributions}
+[wip]
