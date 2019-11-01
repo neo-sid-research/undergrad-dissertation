@@ -58,34 +58,20 @@
 
 \author{Nei Cardoso de Oliveira Neto}
 
-%----------------------------------------------------------------
-% Título (OBRIGATÓRIO). Devem ser passados DOIS parâmetros,
-% o título em português E o inglês, não importando o idioma
-% escolhido. Os títulos são utilizados para a montagem da capa,
-% resumo e abstract mais tarde.
-%----------------------------------------------------------------
-\title{Seu Título Aqui}
+\title{Podem Câmeras Móveis Ver No Escuro?}
       {Can Mobile Cameras See in the Dark?}
 
-%----------------------------------------------------------------
-% Opções para o tipo de trabalho (OBRIGATÓRIO)
-%----------------------------------------------------------------
 \tipotrabalho{\ptci}         % Proposta de Trabalho de Conclusão
 %\tipotrabalho{\tci}         % Trabalho de Conclusão I
 %\tipotrabalho{\tcii}        % Trabalho de Conclusão II
 
-%----------------------------------------------------------------
+
 % Seleção do curso ("este trabalho é um requisito parcial para
 % obtenção do grau de (mestre ou doutor) em Ciência da Computação").
-%----------------------------------------------------------------
 % \curso{\cc} % Ciência da Computação
 \curso{\si} % Sistemas de Informação
-%\curso{\es} % Engenharia de Software
 
-%----------------------------------------------------------------
-% Orientador (e Co-orientador, caso haja um). É OBRIGATÓRIO
-% informar pelo menos o orientador.
-%----------------------------------------------------------------
+
 \orientador{Rodrigo Coelho Barros}
 % \coorientador{Ciclano de Farias}
 
@@ -147,8 +133,9 @@
 Taking photos in low light environments with a mobile device such as a smartphone is challenging.
 Mainly due to hardware limitations, the added noise that comes with high ISO settings, and the blur introduced by the above-average exposures necessary.
 Several proprietary black-box strategies have been developed and deployed to the flagship smartphones.
-We propose an extension of the See-in-the-Dark dataset (\cite{DBLP:conf/cvpr/ChenCXK18} section 3) with images taken by smartphones, instead of DSLRs.
-While we use the same U-net architecture proposed by **\cite{} LSID section 4**, we propose the use of a perceptual dissimilarity metric as a loss function instead of the traditional pixel-wise MAE loss.
+In this paper, we propose an extension of the See-in-the-Dark dataset \cite{DBLP:conf/cvpr/ChenCXK18:lsid} (section 3) with images taken by smartphones, instead of DSLRs.
+While we use the same U-net architecture proposed by Ronneberger et al in~\cite{DBLP:conf/miccai/RonnebergerFB15:unet} and already used on this very task by Chen et al in~\cite{DBLP:conf/cvpr/ChenCXK18:lsid} (section 4.1), we propose the use classification and segmentation in a branch of the same network image-to-image translation network to give it extra supervision in the form of context-awareness.
+We also experiment with perceptual dissimilarity metrics as loss functions instead of the traditional pixel-wise MAE loss the LSID authors had originally found to be the best performing.
 \end{abstract}
 
 
